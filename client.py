@@ -4,6 +4,8 @@ genai.configure(api_key="AIzaSyCeAMs6SOBlrrp44vPU4fq5j8IMRbWoG5I")
 
 def ask_gemini(prompt):
     model = genai.GenerativeModel("gemini-1.5-flash")
+    if prompt=="":
+        print("Say That Again Please...")
 
     response = model.generate_content(prompt)
 

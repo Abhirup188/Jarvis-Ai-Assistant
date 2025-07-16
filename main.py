@@ -57,7 +57,6 @@ if __name__ == "__main__":
         if 'open google' in text:
             speak("opening google")
             webbrowser.open("www.google.com")
-            text = ""
         if 'open youtube' in text:
             speak("opening youtube")
             webbrowser.open("www.youtube.com")
@@ -65,7 +64,6 @@ if __name__ == "__main__":
         if 'open ocean of games' in text:
             speak("opening ocean of games")
             webbrowser.open("www.oceanofgames.com")
-            text = ""
 
         if 'wikipedia' in text:
             speak("Searching Wikipedia...")
@@ -73,13 +71,11 @@ if __name__ == "__main__":
             speak("According To Wikipedia...")
             print(result)
             speak(result)
-            text = ""
         
         if "shutdown" in text:
             speak("Bye Sir. Have A Nice Day")
             print("Shutting Down Jarvis...")
             exit()
-            text = ""
 
 
         if text.startswith("play"):
@@ -89,7 +85,6 @@ if __name__ == "__main__":
             
             url = musicLibrary.music[song]
             webbrowser.open(url)
-            text = ""
 
         if 'what is the temperature' in text:
             check = text.split(" ")
@@ -118,14 +113,10 @@ if __name__ == "__main__":
             ianswer = client.ask_gemini_with_image(prompt=text,image_path=image_path)
             print(ianswer)
             speak(ianswer)
-            text = ""
-
-        
         else:
             answer = client.ask_gemini(text)
             print(answer)
             speak(answer)
-            text = ""
                 
     
             
